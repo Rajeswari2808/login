@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+<head>
+<script>
+function makecolor()
+{
+var hit=false;
+color_bar=newArray(3);
+for(vari=0;i<color_bar.length;i++)
+{
+while(hit==false)
+{
+start_num=(Math.round(Math.random()*1000));
+if(start_num>255)
+{
+hit=false;
+continue;
+}
+color_bar[i]=start_num;
+hit=false;
+}
+
+x=color_bar[0].toString(16);
+if(x.length<2)
+{
+x=("0"+x)
+}
+y=color_bar[0].toString(16);
+if(y.length<2)
+{
+y=("0"+y)
+}
+z=color_bar[0].toString(16);
+if(z.length<2)
+{
+z=("0"+z)
+}
+return('""+"#"x"+"y"+"z"+""');
+}
+</script>
+</head>
+
+<body>
+<script>
+document.write("<p>"+"The selected color is:"+makcolor()+"<p>")
+document.write("<font color="makecolor()+"><h2>Click to reload change of font color.</h2></font>");
+</script>
+</body>
+</html>
